@@ -1,5 +1,5 @@
-# Create the SQL query string
-# Filter by programs
+# query(output) where output is an ipywidget value list of size 3.
+# Returns an SQL query string.
 
 def query(output):
     programs = output[0]
