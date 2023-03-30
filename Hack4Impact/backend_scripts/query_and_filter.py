@@ -1,7 +1,21 @@
-# query(output) where output is an ipywidget value list of size 3.
-# Returns an SQL query string.
-
 def query(output):
+    """
+    Returns: an SQL query string that filters and retrieves data from the 
+    database based on the user's selections.
+
+    The query function processes the user's selections from the argument output, 
+    containing a list of ipywidgets.Widget objects:
+    1. programs: A SelectMultiple widget containing the selected program flags
+       (e.g., NPDES_FLAG, AIR_FLAG, RCRA_FLAG).
+    2. active: A Checkbox widget indicating whether to filter results by active
+       facilities.
+    3. naics: A Text widget containing the input NAICS codes, separated by commas.
+
+Example:
+    selections = [programs, active, naics] # list of ipywidgets.Widget objects
+    squery = query(selections)
+    > squery now contains an SQL query string based on the user's selections
+    """
     programs = output[0]
     active = output[1]
     naics = output[2]
