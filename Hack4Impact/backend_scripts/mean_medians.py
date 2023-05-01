@@ -1,7 +1,10 @@
+
 #[plot_visual_data_box_plot] creates a box plot given the the argument needed (tbl_arg)
 #such as echoFAC_QTRS_WITH_NC.NOT A STRING with the titles and axis labels
-#data that is not a number is ignored and not included in calculations
 def plot_visual_data_box_plot(tbl_arg, title, x_axis_title, y_axis_title):
+  import math
+  import numpy as np
+  import matplotlib.pyplot as plt
   arr = []
   for x in tbl_arg:
     if math.isnan(x)== False:
