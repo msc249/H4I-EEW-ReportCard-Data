@@ -1,5 +1,5 @@
 import numpy as np
-def metrics():
+def metrics(echo):
   print("FAC_PERCENT_MINORITY:")
   print("Mean "+str(np.mean(echo['FAC_PERCENT_MINORITY'])))
   print("Median "+str(np.nanmedian(echo['FAC_PERCENT_MINORITY'])))
